@@ -1,0 +1,32 @@
+[global]
+    monitor = 0
+    follow = mouse
+    width = 300
+    height = (0, 110)
+    origin = top-right
+    offset = (20, 20)
+    font = JetBrainsMono Nerd Font 11
+    corner_radius = 12
+    frame_width = 2
+    padding = 15
+    horizontal_padding = 15
+    gap_size = 10
+    icon_position = left
+
+[urgency_low]
+    background = "{background}"
+    foreground = "{foreground}"
+    frame_color = "{color1}"
+    timeout = 5
+
+[urgency_normal]
+    background = "{background}"
+    foreground = "{foreground}"
+    frame_color = "{color2}"
+    timeout = 10
+
+[urgency_critical]
+    background = "{background}"
+    foreground = "{foreground}"
+    frame_color = "{color3}"
+    timeout = 0

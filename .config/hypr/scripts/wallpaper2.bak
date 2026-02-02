@@ -1,0 +1,79 @@
+#!/bin/bash
+
+DIR="$HOME/Pictures/Wallpapers"
+
+WALLPAPER=$(ls "$DIR" | rofi -dmenu -p "Wallpaper")
+[ -z "$WALLPAPER" ] && exit
+
+FULL_PATH="$DIR/$WALLPAPER"
+
+# تغيير الخلفية
+swww img "$FULL_PATH" --transition-type none
+
+# توليد الألوان بدون تغيير الخلفية مرة ثانية
+wal -i "$FULL_PATH" -n
+
+# =========================
+# تحديث system24-wal.css تلقائيًا لـ Vencord
+# =========================
+THEME="$HOME/.config/Vencord/themes/system24-wal.css"
+SYSTEM24_URL="https://refact0r.github.io/system24/build/system24.css"
+WAL_CSS="$HOME/.cache/wal/colors.css"
+
+# إنشاء ملف جديد
+echo "/* system24 + wal auto-generated theme */" > "$THEME"
+echo "@import url('$SYSTEM24_URL');" >> "$THEME"
+echo "" >> "$THEME"
+
+# استخراج :root من colors.css
+awk '
+  BEGIN {print ":root {"}
+  /--background/ || /--foreground/ || /--color[0-9]+/ {print "  " $0}
+  END {print "}"}' "$WAL_CSS" >> "$THEME"
+
+# إضافة mapping system24
+cat >> "$THEME" <<EOL
+:root {
+
+ --bg-4: hsla(220, 15%, 10%, 0.85); /* main background شفافة */
+    --bg-3: color-mix(in srgb, var(--background), var(--color0) 30% / 0.8);
+    --bg-2: color-mix(in srgb, var(--background), var(--color0) 50% / 0.8);
+    --bg-1: var(--color0);
+    
+    --panel-blur: on;
+    --blur-amount: 12px;
+    --transparency-tweaks: on;
+
+  --text-1: var(--foreground);
+  --text-2: color-mix(in srgb, var(--foreground), white 10%);
+  --text-3: color-mix(in srgb, var(--foreground), gray 20%);
+  --text-4: color-mix(in srgb, var(--foreground), gray 40%);
+  --text-5: color-mix(in srgb, var(--foreground), gray 60%);
+
+  --purple-1: var(--color5);
+  --purple-2: var(--color13);
+  --purple-3: var(--color12);
+  --purple-4: var(--color6);
+  --purple-5: var(--color4);
+
+  --blue-2: var(--color4);
+  --green-2: var(--color2);
+  --red-2: var(--color1);
+  --yellow-2: var(--color3);
+
+  --online: var(--color2);
+  --idle: var(--color3);
+  --dnd: var(--color1);
+  --streaming: var(--color5);
+}
+EOL
+
+echo "✅ system24-wal.css updated!"
+
+# =========================
+# تحديث Waybar
+pkill waybar
+waybar &
+
+# إعادة تحميل Hyprland (للـ borders)
+hyprctl reload

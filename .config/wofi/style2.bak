@@ -1,0 +1,83 @@
+@import url('/home/mahde/.cache/wal/colors-waybar.css')
+/* Global font and base colors */
+* {
+    font-family: Maple Mono, monospace;
+    background: transparent;
+    color: #d8cab8; /* primary text color */
+}
+
+/* Main window */
+#window {
+    color: #d8cab8;
+    border: 1px solid #ac82e9; /* subtle accent for border */
+    border-radius: 14px;
+    background-image: linear-gradient(to bottom, #141216 0%, #1f1b26 100%); /* dark gradient */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5); /* subtle depth */
+}
+
+/* Scroll area */
+#scroll {
+    border-top: 1px solid #ac82e9;
+}
+
+/* Inner padding */
+#inner-box {
+    padding-top: 12px;
+}
+
+/* Entry items */
+#entry {
+    border: none;
+    color: #d8cab8;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    background: #1f1b26; /* subtle dark background for entries */
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Selected entry */
+#entry:selected {
+    background: linear-gradient(90deg, #27232b 0%, #3b3845 100%);
+    color: #ffffff;
+    font-weight: bold;
+    outline: none;
+}
+
+/* Input field */
+#input {
+    background: #141216;
+    color: #d8cab8;
+    border: none;
+    border-bottom: 2px solid #ac82e9; /* accent underline */
+    font-style: normal;
+    border-radius: 8px 8px 0 0;
+    padding: 12px;
+    margin: 8px 8px 4px 8px;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+#input:focus {
+    background: #27232b;
+    border-color: #b4befe; /* focus accent color */
+    font-style: italic;
+    color: #ffffff;
+}
+
+/* Image styling inside entries */
+#img {
+    padding: 4px;
+    margin-right: 6px;
+}
+
+/* Hover effect for entries */
+#entry:hover {
+    background: #27232b;
+    color: #f5c2e7; /* subtle accent color for hover */
+}
+
+/* Optional: smooth transitions for all changes */
+#window, #entry, #input {
+    transition: all 0.25s ease-in-out;
+}
+

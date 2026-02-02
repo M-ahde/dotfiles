@@ -1,0 +1,106 @@
+/* ---- 💫 Wallpaper Selector Theme 💫 ---- */
+
+/* استيراد ألوان Pywal تلقائياً */
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+configuration {
+    modi:                        "drun";
+    show-icons:                  true;
+    drun-display-format:         "{name}";
+    font:                        "JetBrainsMono Nerd Font 10";
+}
+
+/* ---- Window ---- */
+window {
+    width:                        80%;
+    height:                       60%;
+    anchor:                       center;
+    location:                     center;
+    enabled:                      true;
+    border:                       3px;
+    border-color:                 @selected-active-background; /* لون من pywal */
+    border-radius:                20px;
+    background-color:             @background;
+    cursor:                       "default";
+}
+
+/* ---- Mainbox ---- */
+mainbox {
+    enabled:                      true;
+    spacing:                      20px;
+    padding:                      40px;
+    background-color:             transparent;
+    children:                     [ "inputbar", "listview" ];
+}
+
+/* ---- Inputbar ---- */
+inputbar {
+    enabled:                      true;
+    spacing:                      10px;
+    margin:                       0% 20%;
+    padding:                      10px;
+    border-radius:                12px;
+    background-color:             @background-alt;
+    text-color:                   @foreground;
+    children:                     [ "prompt", "entry" ];
+}
+
+entry {
+    enabled:                      true;
+    background-color:             transparent;
+    text-color:                   inherit;
+    cursor:                       text;
+    placeholder:                  "🎞️ Search Wallpapers...";
+    placeholder-color:            inherit;
+    horizontal-align:             0.5;
+}
+
+/* ---- Listview ---- */
+listview {
+    enabled:                      true;
+    columns:                      5;
+    lines:                        2;
+    cycle:                        true;
+    dynamic:                      true;
+    scrollbar:                    false;
+    layout:                       vertical;
+    reverse:                      false;
+    fixed-height:                 true;
+    fixed-columns:                true;
+    spacing:                      30px;
+    background-color:             transparent;
+    cursor:                       "default";
+}
+
+/* ---- Element ---- */
+element {
+    enabled:                      true;
+    orientation:                  vertical;
+    spacing:                      10px;
+    padding:                      15px;
+    border-radius:                15px;
+    background-color:             transparent;
+    text-color:                   @foreground;
+    cursor:                       pointer;
+}
+
+element selected.normal {
+    background-color:             @selected-active-background;
+    text-color:                   @background;
+}
+
+element-icon {
+    size:                         180px; /* حجم عرض الصور */
+    cursor:                       inherit;
+    horizontal-align:             0.5;
+    vertical-align:                 0.5;
+    background-color:             transparent;
+}
+
+element-text {
+    background-color:             transparent;
+    text-color:                   inherit;
+    cursor:                       inherit;
+    vertical-align:               0.5;
+    horizontal-align:             0.5;
+}

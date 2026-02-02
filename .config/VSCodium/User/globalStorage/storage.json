@@ -1,0 +1,122 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "1fcbf0abae5fe29a50961dab126d961f58f7daf69ad19722d275eb8526003b9d",
+    "telemetry.devDeviceId": "e302a457-3e32-4ae2-9566-a02df7221278",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///home/mahde/Work/all_in_one/MrLYcCs"
+            },
+            {
+                "folderUri": "file:///home/mahde/Work/all_in_one/my-api-name"
+            }
+        ],
+        "emptyWindows": [
+            {
+                "backupFolder": "1770053713939"
+            },
+            {
+                "backupFolder": "1770054524258"
+            },
+            {
+                "backupFolder": "1770054990618"
+            }
+        ]
+    },
+    "windowControlHeight": 35,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///home/mahde/Work/all_in_one/MrLYcCs": "__default__profile__",
+            "file:///home/mahde/Work/all_in_one/my-api-name": "__default__profile__"
+        },
+        "emptyWindows": {
+            "1770053713939": "__default__profile__",
+            "1770054524258": "__default__profile__",
+            "1770054990618": "__default__profile__"
+        }
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1f1f1f",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#cccccc",
+            "background": "#1f1f1f",
+            "editorBackground": "#1f1f1f",
+            "titleBarBackground": "#181818",
+            "titleBarBorder": "#2b2b2b",
+            "activityBarBackground": "#181818",
+            "activityBarBorder": "#2b2b2b",
+            "sideBarBackground": "#181818",
+            "sideBarBorder": "#2b2b2b",
+            "statusBarBackground": "#181818",
+            "statusBarBorder": "#2b2b2b",
+            "statusBarNoFolderBackground": "#1f1f1f"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 235,
+            "auxiliaryBarWidth": 0,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///home/mahde/Work/all_in_one/MrLYcCs",
+            "backupPath": "/home/mahde/.config/VSCodium/Backups/be3c97ce45ac250fe28df3ff7cf7e9c3",
+            "uiState": {
+                "mode": 0,
+                "x": 0,
+                "y": 0,
+                "width": 948,
+                "height": 512
+            }
+        },
+        "openedWindows": [
+            {
+                "folder": "file:///home/mahde/Work/all_in_one/MrLYcCs",
+                "backupPath": "/home/mahde/.config/VSCodium/Backups/be3c97ce45ac250fe28df3ff7cf7e9c3",
+                "uiState": {
+                    "mode": 0,
+                    "x": 0,
+                    "y": 0,
+                    "width": 948,
+                    "height": 512
+                }
+            },
+            {
+                "folder": "file:///home/mahde/Work/all_in_one/my-api-name",
+                "backupPath": "/home/mahde/.config/VSCodium/Backups/cfba944d6cb549bd4f82c12e0841765c",
+                "uiState": {
+                    "mode": 0,
+                    "x": 0,
+                    "y": 0,
+                    "width": 948,
+                    "height": 512
+                }
+            }
+        ]
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 235,
+            "auxiliaryBarWidth": 300,
+            "workspaces": {
+                "0431b3c44c3afba23ba13a1904fabab8": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "465786a8340d194cb7547fc35231f839": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                }
+            }
+        }
+    }
+}

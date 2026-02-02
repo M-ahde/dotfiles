@@ -1,0 +1,10 @@
+.config/discord/
+.config/google-chrome/
+.config/microsoft-edge/
+.config/Brave-Browser/
+.config/pulse/
+.config/Cache/
+.config/cached/
+.config/session/
+*.log
+.bash_history

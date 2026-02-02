@@ -1,0 +1,50 @@
+/* system24 + wal auto-generated theme */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+:root {
+      --background: #160712;
+      --foreground: #cfcabe;
+      --color0: #160712;
+      --color1: #66594C;
+      --color2: #8A5A3B;
+      --color3: #8C7259;
+      --color4: #7A8368;
+      --color5: #9E916E;
+      --color6: #C79A72;
+      --color7: #cfcabe;
+      --color8: #908d85;
+      --color9: #66594C;
+      --color10: #8A5A3B;
+      --color11: #8C7259;
+      --color12: #7A8368;
+      --color13: #9E916E;
+      --color14: #C79A72;
+      --color15: #cfcabe;
+}
+:root {
+ --bg-4: hsla(220, 15%, 10%, 0.85);
+ --bg-3: color-mix(in srgb, var(--background), var(--color0) 30% / 0.8);
+ --bg-2: color-mix(in srgb, var(--background), var(--color0) 50% / 0.8);
+ --bg-1: var(--color0);
+ --panel-blur: on;
+ --blur-amount: 12px;
+ --transparency-tweaks: on;
+ --text-1: var(--foreground);
+ --text-2: color-mix(in srgb, var(--foreground), white 10%);
+ --text-3: color-mix(in srgb, var(--foreground), gray 20%);
+ --text-4: color-mix(in srgb, var(--foreground), gray 40%);
+ --text-5: color-mix(in srgb, var(--foreground), gray 60%);
+ --purple-1: var(--color5);
+ --purple-2: var(--color13);
+ --purple-3: var(--color12);
+ --purple-4: var(--color6);
+ --purple-5: var(--color4);
+ --blue-2: var(--color4);
+ --green-2: var(--color2);
+ --red-2: var(--color1);
+ --yellow-2: var(--color3);
+ --online: var(--color2);
+ --idle: var(--color3);
+ --dnd: var(--color1);
+ --streaming: var(--color5);
+}

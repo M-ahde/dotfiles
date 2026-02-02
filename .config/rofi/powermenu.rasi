@@ -1,0 +1,82 @@
+/**
+ * تصميم Power Menu بتأثير 3D بكسل متوافق مع Pywal
+ * المصمم: مهدي (تطوير Gemini)
+ */
+
+@import "~/.cache/wal/colors-rofi-dark"
+
+configuration {
+    /* الخط الأساسي للأزرار */
+    font: "JetBrainsMono Nerd Font 12";
+    show-icons: false;
+}
+
+window {
+    width: 450px; /* عرض أكبر لاستيعاب فن ASCII */
+    transparency: "real";
+    background-color: transparent;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    /* الترتيب: الرسالة (نص الـ 3D) ثم القائمة (الأزرار) */
+    children: [ message, listview ];
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 2px;
+    border-radius: 15px;
+    border-color: @background;
+    padding: 25px;
+}
+
+/* قسم نص الـ 3D (الذي نولده بـ figlet) */
+message {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    margin: 0px 0px 20px 0px;
+    padding: 15px;
+    border: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+textbox {
+    /* مهم جداً: خط مونو ناعم وصغير ليظهر رسم الـ 3D بشكل صحيح */
+    font: "Monocraft 6"; 
+    text-color: @foreground;
+    background-color: transparent;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+listview {
+    columns: 1;
+    lines: 4;
+    spacing: 10px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    scrollbar: false;
+    background-color: transparent;
+}
+
+element {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    text-color: @foreground;
+}
+
+element selected {
+    background-color: @foreground;
+    text-color: @background;
+    /* ظل خفيف خلف الزر المختار لإعطاء عمق بسيط */
+    border: 0px 0px 3px 0px;
+    border-color: rgba(0,0,0,0.4);
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}

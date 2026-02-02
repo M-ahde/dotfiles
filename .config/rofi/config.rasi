@@ -1,0 +1,10 @@
+/* ~/.config/rofi/config.rasi */
+window {
+    width: 300px;
+    border: 2px;
+    border-radius: 12px;
+    border-color: @border-color;
+}
+listview {
+    lines: 4;
+}

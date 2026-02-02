@@ -1,0 +1,88 @@
+/* ============================== */
+/*  CATPPUCCIN MOCHA + PYWAL     */
+/*  fixed shell / dynamic inside */
+/* ============================== */
+
+/* pywal colors (dynamic) */
+@import url("file:///home/mahde/.cache/wal/colors-waybar.css");
+
+/* ============================== */
+/*  CATPPUCCIN BASE (FIXED)       */
+/* ============================== */
+
+@define-color rosewater     #f5e0dc;
+@define-color flamingo      #f2cdcd;
+@define-color pink          #f5c2e7;
+@define-color mauve         #cba6f7;
+@define-color red           #f38ba8;
+@define-color maroon        #eba0ac;
+@define-color peach         #fab387;
+@define-color yellow        #f9e2af;
+@define-color green         #a6e3a1;
+@define-color teal          #94e2d5;
+@define-color sky           #89dceb;
+@define-color sapphire      #74c7ec;
+@define-color blue          #89b4fa;
+@define-color lavender      #b4befe;
+
+@define-color text          #cdd6f4;
+@define-color subtext1      #bac2de;
+@define-color subtext0      #a6adc8;
+
+@define-color overlay2      #9399b2;
+@define-color overlay1      #7f849c;
+@define-color overlay0      #6c7086;
+
+@define-color surface2      #585b70;
+@define-color surface1      #45475a;
+@define-color surface0      #313244;
+
+@define-color base          #1e1e2e;
+@define-color mantle        #181825;
+@define-color crust         #11111b;
+
+/*
+    br - border
+    bg - background
+    fg - foreground
+*/
+
+/* ============================== */
+/*  MAIN COLORS                   */
+/*  shell = fixed / inside = dyn  */
+
+
+
+@define-color main-bg  mix(@background, @foreground, 0.07);  /* 7% من foreground مع background */
+@define-color main-br @crust;   /* ثابت داكن */
+
+@define-color main-fg       @foregrund;       /* ثابت */
+
+@define-color accent        @color4;     /* ديناميكي */
+@define-color hover-bg      @color1;     /* ديناميكي */
+@define-color hover-fg      alpha(@foregrund, 0.75);
+@define-color outline       shade(@crust, 0.6); /* ثابت */
+
+/* ============================== */
+/*  MODULE COLORS (DYNAMIC)       */
+/* ============================== */
+
+@define-color workspaces    @color0;
+@define-color temperature   @color0;
+@define-color memory        @color2;
+@define-color cpu           @color3;
+@define-color time          @color3;
+@define-color date          @color2;
+@define-color tray          @color0;
+@define-color volume        @color0;
+@define-color backlight     @color2;
+@define-color battery       @color3;
+
+/* ============================== */
+/*  STATE COLORS (DYNAMIC)        */
+/* ============================== */
+
+@define-color warning       @color11; /* yellow-ish */
+@define-color critical      @color9;  /* red-ish */
+@define-color charging      @color10; /* green-ish */
+

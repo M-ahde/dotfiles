@@ -1,0 +1,74 @@
+@import "~/.cache/wal/colors-rofi-dark"
+
+configuration {
+    font: "JetBrainsMono Nerd Font 11";
+    show-icons: false;
+}
+
+window {
+    width: 800px;         /* زيادة العرض ليناسب الجمل الطويلة */
+    height: 600px;        /* زيادة الارتفاع الكلي */
+    transparency: "real";
+    background-color: transparent;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 2px;
+    border-radius: 15px;
+    border-color: @foreground; /* تم التغيير من color1 */
+    padding: 20px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0px 0px 10px 0px;
+}
+
+prompt {
+    text-color: @foreground; /* تم التغيير من color1 */
+    font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+entry {
+    text-color: @foreground;
+    placeholder: "Search Copy History...";
+    placeholder-color: rgba(255, 255, 255, 0.3);
+}
+
+listview {
+    columns: 1;
+    spacing: 12px;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    fixed-height: false; /* يسمح للمربعات بالتمدد */
+}
+
+element {
+    padding: 15px;      /* زيادة الحشوة الداخلية لتوسيع المربع */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.02);
+    text-color: @foreground;
+}
+
+element selected {
+    background-color: @foreground; /* تم التغيير من color1 */
+    text-color: @background;
+    border: 0px 0px 3px 0px;
+    border-color: rgba(0,0,0,0.5);
+}
+
+element-text {
+    /* هذه الخاصية تسمح للنص بالالتفاف بدلاً من الاختفاء في سطر واحد */
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    expand: true;
+    /* لجعل النص الطويل يظهر كاملاً */
+    background-color: transparent;
+    text-color: inherit;
+}

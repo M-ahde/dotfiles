@@ -1,0 +1,43 @@
+{
+    "group/pulseaudio": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio#output",
+            "pulseaudio#input"
+        ],
+        "drawer": {
+            "transition-left-to-right": false
+        }
+    },
+
+    "pulseaudio#output": {
+        "format": "{icon} {volume}% ",
+        "format-muted": "󰝟 {volume}% ",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+        "on-click-right": "pavucontrol",
+        "smooth-scrolling-threshold": 1,
+        "tooltip-format": "Output: {desc}"
+    },
+
+    "pulseaudio#input": {
+        "format": "{format_source}",
+        "format-source": "󰍬 {volume}% ",
+        "format-source-muted": "󰍭 {volume}% ",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-",
+        "on-click-right": "pavucontrol",
+        "tooltip-format": "Input: {desc}"
+    }
+}

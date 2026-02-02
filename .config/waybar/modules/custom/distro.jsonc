@@ -1,0 +1,11 @@
+{
+	"custom/distro": {
+		"format": "󰣇",
+    "on-click": "~/.config/waybar/scripts/power-menu.sh",
+        "on-click-right": "pkill rofi", // زر الماوس الأيمن يغلق القائمة فوراً إذا كانت مفتوحة
+        "tooltip": true,
+        "tooltip-format": "󱄅 System Actions", // تلميح بشكل أجمل
+        "interval": 86400 // تحديث مرة كل يوم (لا يستهلك أي موارد)
+    
+	}
+}

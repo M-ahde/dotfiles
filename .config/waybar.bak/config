@@ -1,0 +1,28 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "network", "battery", "tray"],
+
+  "clock": {
+    "format": "  %H:%M"
+  },
+
+  "battery": {
+    "format": "{capacity}%  ",
+    "format-charging": "{capacity}% ⚡",
+    "format-warning": "{capacity}%  "
+  },
+
+  "network": {
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "󰈀 Wired"
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%"
+  }
+}

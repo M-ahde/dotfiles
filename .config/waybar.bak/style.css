@@ -1,0 +1,36 @@
+@import url("file:///home/mahde/.cache/wal/colors-waybar.css");
+
+/* عام */
+* {
+  font-family: JetBrains Mono, Noto Sans Arabic;
+  font-size: 13px;
+  border: none;
+  border-radius: 10px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+/* الوحدات */
+#workspaces button {
+  padding: 0 10px;
+  color: @foreground;
+}
+
+#workspaces button.active {
+  background: @color2;
+  color: @background;
+}
+
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#tray {
+  padding: 0 12px;
+  margin: 4px;
+  background: alpha(@background, 0.85);
+  color: @foreground;
+}

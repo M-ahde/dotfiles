@@ -1,0 +1,13 @@
+{
+    "custom/clipboard": {
+        "format": "󰅌", // أيقونة الحافظة من Nerd Fonts
+        "rotate": 0,
+        "min-length": 2,
+        "max-length": 2,
+        "on-click": "~/.config/waybar/scripts/clipboard.sh d",
+        "on-click-right": "~/.config/waybar/scripts/clipboard.sh w",
+        "on-click-middle": "cliphist wipe && notify-send 'Clipboard' 'History Cleared' -i 'edit-clear'",
+        "tooltip": true,
+        "tooltip-format": "󱄅 Clipboard Manager\n\nLeft Click: Open History\nRight Click: Wipe Cache"
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "time_format": "%H:%M:%S",
+   "time_color": "cyan",
+  "date_color": "white",
+  "box": true,
+  "box_color": "blue",
+  "seconds": true
+}
